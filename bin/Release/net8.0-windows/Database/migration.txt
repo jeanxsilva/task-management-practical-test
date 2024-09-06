@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS Task (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Description TEXT,
+    TaskStatusId INTEGER
+);
+
+CREATE TABLE TaskStatus (
+    Id INTEGER PRIMARY KEY,
+    Description TEXT
+);
+
+INSERT INTO TaskStatus 
+    (Id, Description)
+VALUES 
+    (0, 'New'),
+    (1, 'Excluded'),
+    (5, 'Running'),
+    (999, 'Concluded');
